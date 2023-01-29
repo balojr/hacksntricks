@@ -1,0 +1,52 @@
+.container {
+    position: relative;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-wrap: wrap;
+}
+
+.container .inside {
+    position: relative;
+    width: 100%;
+    height: 100%;
+    margin: 10px;
+}
+
+.container .inside:hover .inside-image {
+    transform: translate(-1.5rem, -1.5rem);
+}
+
+.container .inside:hover .inside-text {
+    transform: translate(10rem, 20rem);
+}
+
+h1 {
+    font-family: 'Roboto', sans-serif;
+    color: #0E5E5C;
+    font-weight: 700;
+}
+
+span {
+    font-family: 'Roboto', sans-serif;
+    color: #043432;
+    font-size: 20;
+}
+
+.inside-image {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 30vw;
+    height: 40vh;
+    z-index: 2;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+}
+
+.inside-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    resize: both;
+}
